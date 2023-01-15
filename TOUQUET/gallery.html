@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./gallery.css">
+    <title>gallery</title>
+</head>
+<body>
+    <div id='content'>
+        <img id="test" />
+        
+    </div>
+
+    <div id='content1'>
+        <img id="test1"/>
+    </div>
+
+    <div id='content2'>
+        <img id="test2"/>
+    </div>
+
+    <div id='content3'>
+        <img id="test3"/>
+    </div>
+
+
+<script>
+     var kiwi = [
+        "./IMG/film-horreur-halloween.jpg",
+        "./IMG/horeur.jpg",
+        "./IMG/11637390.webp"
+    ];
+    var poy = document.getElementById("test");
+    var currentIndex = 0;
+    var testTimer;
+
+    (function nextImg(){        
+        testTimer = Date.now();
+        poy.src=kiwi[currentIndex];
+        poy.onload=function(){
+            currentIndex = (currentIndex + 1) % kiwi.length;
+            var remainingTime = 1000- (Date.now() - testTimer);
+            if(remainingTime>0){ setTimeout(nextImg, remainingTime); }
+            else { nextImg(); }
+        };        
+    })();
+
+
+
+    var kiwi1 = [
+        "./IMG/saw.webp",
+        "./IMG/scream.jpg",
+        "./IMG/halloween.jpeg"
+    ];
+    var img = document.getElementById("test1");
+    var currentIndex = 0;
+    var test1Timer;
+
+    (function nextImg(){        
+        test1Timer = Date.now();
+        img.src=kiwi1[currentIndex];
+        img.onload=function(){
+            currentIndex = (currentIndex + 1) % kiwi1.length;
+            var remainingTime = 2000- (Date.now() - test1Timer);
+            if(remainingTime>0){ setTimeout(nextImg, remainingTime); }
+            else { nextImg(); }
+        };        
+    })();
+
+
+
+    var kiwi2 = [
+        "../img/cssc.jpg",
+        "../img/golden-state-warriors-wallpaper-oob0gxm68s8igbud.jpg",
+        "../img/Y0eIHR.jpg"
+    ];
+    var loko = document.getElementById("test2");
+    var currentIndex = 0;
+    var test2Timer;
+
+    (function nextImg(){        
+        test2Timer = Date.now();
+        loko.src=kiwi2[currentIndex];
+        loko.onload=function(){
+            currentIndex = (currentIndex + 1) % kiwi2.length;
+            var remainingTime = 1000- (Date.now() - test2Timer);
+            if(remainingTime>0){ setTimeout(nextImg, remainingTime); }
+            else { nextImg(); }
+        };        
+    })();
+
+
+
+
+    var kiwi3 = [
+        "../img/croatie-lacs-plitvice-cascades-7.jpg",
+        "../img/f6tmkr5znoq41.png",
+        "../img/La-peau-du-kiwi-se-mange-t-elle-vraiment.jpg"
+    ];
+    var nice = document.getElementById("test3");
+    var currentIndex = 0;
+    var test3Timer;
+
+    (function nextImg(){        
+        test3Timer = Date.now();
+        nice.src=kiwi3[currentIndex];
+        nice.onload=function(){
+            currentIndex = (currentIndex + 1) % kiwi3.length;
+            var remainingTime = 3000- (Date.now() - test3Timer);
+            if(remainingTime>0){ setTimeout(nextImg, remainingTime); }
+            else { nextImg(); }
+        };        
+    })();
+
+
+
+</script>
+
+</body>
+</html>

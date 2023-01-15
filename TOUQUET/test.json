@@ -1,0 +1,21 @@
+[
+
+    {
+        "nom" : "donald",
+        "id" : 1,
+        "ecole" : "polythec"  
+    },
+
+    {
+        "nom" : "joel",
+        "id" : 2,
+        "ecole" : "polythec"
+    },
+
+    {
+        "nom" : "herman",
+        "id" : 3,
+        "ecole" : "polythec"
+    }
+
+]
